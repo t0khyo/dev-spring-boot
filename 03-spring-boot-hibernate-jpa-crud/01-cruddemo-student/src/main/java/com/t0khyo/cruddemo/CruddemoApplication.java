@@ -17,9 +17,33 @@ public class CruddemoApplication {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
-            //createStudent(studentDAO);
-            createMultipleStudents(studentDAO);
+            // createStudent(studentDAO);
+
+            // createMultipleStudents(studentDAO);
+
+            readStudent(studentDAO);
         };
+    }
+
+    private void readStudent(StudentDAO studentDAO) {
+        // create a student object
+        System.out.println("Creating new student object ...");
+        Student tempStudent = new Student("Abdelrahman", "Eltokhy", "abdelrahman@t0khyo.com");
+
+        // save the student
+        System.out.println("Saving the student ...");
+        studentDAO.save(tempStudent);
+
+        // display id of the saved student
+        int theId = tempStudent.getId();
+        System.out.println("Saved student. Generated id: " + theId);
+
+        // retrieve student based on the id: primary key
+        System.out.println("Retrieving the student with id: " + theId);
+        Student myStudent = studentDAO.findById(theId);
+
+        // display student
+        System.out.println("Found the student: " + myStudent);
     }
 
     private void createMultipleStudents(StudentDAO studentDAO) {
@@ -38,15 +62,15 @@ public class CruddemoApplication {
 
     private void createStudent(StudentDAO studentDAO) {
         // create the student object
-		System.out.println("Creating new student object ...");
-        Student tempStudent = new Student("Abdelrahman", "Eltokhy", "abdelrahman.eltokhy@outlook.com");
+        System.out.println("Creating new student object ...");
+        Student tempStudent = new Student("Abdelrahman", "Eltokhy", "abdelrahman@t0khyo.com");
 
         // save the student object
-		System.out.println("Saving the student ...");
-		studentDAO.save(tempStudent);
+        System.out.println("Saving the student ...");
+        studentDAO.save(tempStudent);
 
         // display id of the student
-		System.out.println("Saved student. Generated id: " + tempStudent.getId());
+        System.out.println("Saved student. Generated id: " + tempStudent.getId());
     }
 
 }

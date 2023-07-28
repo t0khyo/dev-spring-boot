@@ -11,21 +11,21 @@ public class Student {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "last_name")
-    private String lastName;
-
     @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
 
     @Column(name = "email")
     private String email;
 
     // define constructors4
-    public Student(){
+    public Student() {
 
     }
 
-    public Student( String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.email = email;
@@ -72,8 +72,8 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", lastName='" + lastName + '\'' +
                 ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
