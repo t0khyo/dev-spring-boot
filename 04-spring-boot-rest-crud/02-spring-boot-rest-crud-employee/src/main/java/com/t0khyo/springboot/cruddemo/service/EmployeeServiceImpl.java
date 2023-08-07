@@ -3,6 +3,7 @@ package com.t0khyo.springboot.cruddemo.service;
 import com.t0khyo.springboot.cruddemo.dao.EmployeeDAO;
 import com.t0khyo.springboot.cruddemo.entity.Employee;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,11 +26,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeDAO.findById(theId);
     }
 
+    @Transactional
     @Override
     public Employee save(Employee employee) {
         return employeeDAO.save(employee);
     }
 
+    @Transactional
     @Override
     public void deleteById(int theId) {
         employeeDAO.deleteById(theId);
