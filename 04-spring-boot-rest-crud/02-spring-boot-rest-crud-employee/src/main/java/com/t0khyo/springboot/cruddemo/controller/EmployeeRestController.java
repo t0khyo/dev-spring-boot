@@ -16,8 +16,8 @@ public class EmployeeRestController {
 
     // quick and dirty: inject the employee DAO directly
     @Autowired
-    public EmployeeRestController(EmployeeService employeeServices) {
-        this.employeeService = employeeServices;
+    public EmployeeRestController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
     }
 
     // expose "/employees" and return list of employees
