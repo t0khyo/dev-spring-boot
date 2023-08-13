@@ -5,37 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05293a26-409b-4db4-ac5b-ad1aecddc8f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql-scripts/04-setup-spring-security-demo-database-plaintext.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql-scripts/06-setup-spring-security-demo-database-bcrypt-custom-table-names.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql-scripts/employee-directory.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/CruddemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/dao/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/rest/EmployeeRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/service/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/t0khyo/springboot/cruddemo/CruddemoApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/CruddemoApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/dao/EmployeeRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/entity/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/rest/EmployeeRestController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/service/EmployeeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/service/EmployeeServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/t0khyo/springboot/cruddemo/CruddemoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql-scripts/04-setup-spring-security-demo-database-plaintext.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/04-setup-spring-security-demo-database-plaintext.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql-scripts/06-setup-spring-security-demo-database-bcrypt-custom-table-names.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/06-setup-spring-security-demo-database-bcrypt-custom-table-names.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql-scripts/employee-directory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/employee-directory.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +53,25 @@
     "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="B:\dev-spring-boot\05-spring-boot-rest-security\00-spring-boot-rest-security-employee-starter-code\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration name="CruddemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.t0khyo.springboot.cruddemo.CruddemoApplication" />
+      <module name="cruddemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.t0khyo.springboot.cruddemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="cruddemo" />
       <method v="2">
@@ -91,6 +85,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CruddemoApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
