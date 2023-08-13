@@ -26,10 +26,12 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` 
 VALUES 
-('john','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('mary','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('susan','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
+('abdelrahman','{bcrypt}$2a$10$O8J6eDBSSm/4eaVIEzo9Y.3FS6tTpQaO/RMTk.zwZGNCSZ5N1lWe.',1),
+('mohamed','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
+('ahmed','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
 
+-- abdelrahman -> 5571
+-- mohamed || ahmed -> fun123
 
 --
 -- Table structure for table `authorities`
@@ -48,9 +50,9 @@ CREATE TABLE `authorities` (
 
 INSERT INTO `authorities` 
 VALUES 
-('john','ROLE_EMPLOYEE'),
-('mary','ROLE_EMPLOYEE'),
-('mary','ROLE_MANAGER'),
-('susan','ROLE_EMPLOYEE'),
-('susan','ROLE_MANAGER'),
-('susan','ROLE_ADMIN');
+('ahmed','ROLE_EMPLOYEE'),
+('mohamed','ROLE_EMPLOYEE'),
+('mohamed','ROLE_MANAGER'),
+('abdelrahman','ROLE_EMPLOYEE'),
+('abdelrahman','ROLE_MANAGER'),
+('abdelrahman','ROLE_ADMIN');

@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05293a26-409b-4db4-ac5b-ad1aecddc8f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql-scripts/04-setup-spring-security-demo-database-plaintext.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/04-setup-spring-security-demo-database-plaintext.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql-scripts/06-setup-spring-security-demo-database-bcrypt-custom-table-names.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/06-setup-spring-security-demo-database-bcrypt-custom-table-names.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql-scripts/employee-directory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/employee-directory.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/t0khyo/springboot/cruddemo/security/DemoSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql-scripts/05-setup-spring-security-demo-database-bcrypt.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
