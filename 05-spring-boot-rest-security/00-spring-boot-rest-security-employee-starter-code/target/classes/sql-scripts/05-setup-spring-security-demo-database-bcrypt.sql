@@ -30,6 +30,8 @@ VALUES
 ('mohamed','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
 ('ahmed','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
 
+-- abdelrahman -> 5571
+-- mohamed || ahmed -> fun123
 
 --
 -- Table structure for table `authorities`
