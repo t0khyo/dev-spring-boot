@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+  <meta charset="UTF8">
+  <title>Customer confirmation</title>
+  
+  <style>
+    .error {color: red;}
+  </style>
+</head>
+<body>
+  <p>the Customer is confirmed: 
+    <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
+  </p>
+</body>
+</html>
