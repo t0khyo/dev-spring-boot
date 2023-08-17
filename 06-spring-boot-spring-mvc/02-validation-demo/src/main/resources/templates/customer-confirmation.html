@@ -10,10 +10,12 @@
   </style>
 </head>
 <body>
-  <p>the Customer is confirmed: 
-    <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
+  <p>
+    the Customer is confirmed: <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
     <br>
-    <span th:text="${'Free passes: ' + customer.freePasses}"></span>
+    Free passes: <span th:text="${customer.freePasses}"></span>
+    <br>
+    Postal code: <span th:text="${customer.postalCode}"></span>
   </p>
 </body>
 </html>

@@ -34,8 +34,19 @@
 
     Free passes: <input type="text" th:field="*{freePasses}">
 
+    <!-- add error message (if present) -->
     <span th:if="${#fields.hasErrors('freePasses')}"
           th:errors="*{freePasses}"
+          class="error"></span>
+
+
+    <br><br>
+
+    Postal Code: <input type="text" th:field="*{postalCode}">
+
+    <!-- add error message (if present) -->
+    <span th:if="${#fields.hasErrors('postalCode')}"
+          th:errors="*{postalCode}"
           class="error"></span>
 
 
