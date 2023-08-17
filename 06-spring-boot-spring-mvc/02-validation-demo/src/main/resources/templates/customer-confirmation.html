@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF8">
-  <title>Customer confirmation</title>
-  
-  <style>
-    .error {color: red;}
-  </style>
+  <title>Confirmation Page</title>
+  <link rel="stylesheet"
+        th:href="@{/css/customer-confirmation.css}">
 </head>
 <body>
-  <p>
-    the Customer is confirmed: <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
-    <br>
-    Free passes: <span th:text="${customer.freePasses}"></span>
-    <br>
-    Postal code: <span th:text="${customer.postalCode}"></span>
-  </p>
+<div class="confirmation-container">
+  <h2>Confirmation</h2>
+
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>First Name</td>
+      <td th:text="${customer.firstName}"></td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td th:text="${customer.lastName}"></td>
+    </tr>
+    <tr>
+      <td>Free Passes</td>
+      <td th:text="${customer.freePasses}"></td>
+    </tr>
+    <tr>
+      <td>Postal Code</td>
+      <td th:text="${customer.postalCode}"></td>
+    </tr>
+  </table>
+
+  <button class="back-button" onclick="history.back()">Go Back</button>
+</div>
 </body>
 </html>

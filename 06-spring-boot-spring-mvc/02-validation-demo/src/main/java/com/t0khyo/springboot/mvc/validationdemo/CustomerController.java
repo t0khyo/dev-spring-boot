@@ -8,8 +8,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.plaf.IconUIResource;
-
 @Controller
 public class CustomerController {
 
@@ -32,8 +30,8 @@ public class CustomerController {
         return "customer-form";
     }
 
-    @PostMapping("/processForm")
-    public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
+    @PostMapping("/login")
+    public String login(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
 
         System.out.println("last name : |" + theCustomer.getLastName() + "|");
         System.out.println("postal code : |" + theCustomer.getPostalCode() + "|");

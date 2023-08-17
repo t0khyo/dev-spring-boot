@@ -1,61 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF8">
-  <title>Customer Registration Form</title>
-  
-  <style>
-    .error {
-      color: red
-    }
-  </style>
+  <title>Login Page</title>
+  <link rel="stylesheet"
+        th:href="@{/css/customer-form.css}">
+
 </head>
-
 <body>
-  <i>Fill out the form. Asterisk (*) means Required</i>
-  
-  <br><br>
-  
-  <form th:action="@{/processForm}" th:object="${customer}" method="post">
-    
-    First name: <input type="text" th:field="*{firstName}" />
+<div class="login-container">
+  <h2>Login</h2>
 
-    <br><br>
-    
-    Last name *: <input type="text" th:field="*{lastName}" />
+  <form th:object="${customer}" th:action="@{/login}" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" th:field="*{firstName}" />
 
-    <!-- add error message (if present) -->
-    <span th:if="${#fields.hasErrors('lastName')}"
-          th:errors="*{lastName}"
-          class="error"></span>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" th:field="*{lastName}" />
+    <p class="error-message" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
 
-    <br><br>
+    <label for="freePasses">Free Passes:</label>
+    <input type="number" id="freePasses" th:field="*{freePasses}" />
+    <p class="error-message" th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}"></p>
 
-    Free passes: <input type="text" th:field="*{freePasses}">
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" th:field="*{postalCode}" />
+    <p class="error-message" th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}"></p>
 
-    <!-- add error message (if present) -->
-    <span th:if="${#fields.hasErrors('freePasses')}"
-          th:errors="*{freePasses}"
-          class="error"></span>
-
-
-    <br><br>
-
-    Postal Code: <input type="text" th:field="*{postalCode}">
-
-    <!-- add error message (if present) -->
-    <span th:if="${#fields.hasErrors('postalCode')}"
-          th:errors="*{postalCode}"
-          class="error"></span>
-
-
-    <br><br>
-    
-    <input type="submit" value="Submit"/>
-    
+    <button type="submit">Login</button>
   </form>
-  
+</div>
 </body>
-
 </html>
