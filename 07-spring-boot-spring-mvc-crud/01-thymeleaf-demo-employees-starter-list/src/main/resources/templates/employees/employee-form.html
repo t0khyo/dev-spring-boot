@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Save Employee</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #d3d3d3;
+            border-radius: 4px;
+            width: 100%;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0px 2px 6px rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            background-color: #ccc;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Employee Directory</h2>
+    <hr>
+
+    <p>Save Employee</p>
+    <form action="#" th:action="@{/employees/save}"
+          th:object="${employee}" method="POST">
+
+        <input type="text" th:field="*{firstName}"
+               placeholder="First name">
+
+        <input type="text" th:field="*{lastName}"
+               placeholder="Last name">
+
+        <input type="text" th:field="*{email}"
+               class="form-control mb-4 w-25" placeholder="Email">
+
+        <button type="submit">Save</button>
+
+        <br>
+
+        <!-- Button to go back to the list page -->
+        <a th:href="@{/employees/list}" class="btn back-button mt-3">
+            Back to List
+        </a>
+    </form>
+
+</div>
+</body>
+
+</html>

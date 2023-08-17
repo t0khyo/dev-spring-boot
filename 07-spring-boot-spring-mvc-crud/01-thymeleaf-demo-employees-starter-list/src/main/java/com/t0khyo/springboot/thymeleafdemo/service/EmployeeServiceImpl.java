@@ -12,7 +12,7 @@ import com.t0khyo.springboot.thymeleafdemo.entity.Employee;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-	private EmployeeRepository employeeRepository;
+	private final EmployeeRepository employeeRepository;
 	
 	@Autowired
 	public EmployeeServiceImpl(EmployeeRepository theEmployeeRepository) {
@@ -21,21 +21,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Override
 	public List<Employee> findAll() {
-		return employeeRepository.findAll();
+		return employeeRepository.findAllByOrderByFirstNameAsc();
 	}
 
 	@Override
 	public Employee findById(int theId) {
 		Optional<Employee> result = employeeRepository.findById(theId);
-		
+
 		Employee theEmployee = null;
 		
 		if (result.isPresent()) {
 			theEmployee = result.get();
 		}
 		else {
-			// we didn't find the employee
-			throw new RuntimeException("Did not find employee id - " + theId);
+			// we didn't find the employees
+			throw new RuntimeException("Did not find employees id - " + theId);
 		}
 		
 		return theEmployee;
