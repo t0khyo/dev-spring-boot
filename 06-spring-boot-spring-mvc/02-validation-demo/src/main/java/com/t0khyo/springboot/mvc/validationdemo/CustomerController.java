@@ -33,9 +33,7 @@ public class CustomerController {
     }
 
     @PostMapping("/processForm")
-    public String processForm(
-            @Valid @ModelAttribute("customer") Customer theCustomer,
-            BindingResult theBindingResult) {
+    public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
 
         System.out.println("last name : |" + theCustomer.getLastName() + "|");
 
@@ -45,5 +43,4 @@ public class CustomerController {
             return "customer-confirmation";
         }
     }
-
 }
