@@ -26,6 +26,10 @@
     <input type="text" id="postalCode" th:field="*{postalCode}" />
     <p class="error-message" th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}"></p>
 
+    <label for="courseCode">Course Code:</label>
+    <input type="text" id="courseCode" th:field="*{courseCode}" />
+    <p class="error-message" th:if="${#fields.hasErrors('courseCode')}" th:errors="*{courseCode}"></p>
+
     <button type="submit">Login</button>
   </form>
 </div>
