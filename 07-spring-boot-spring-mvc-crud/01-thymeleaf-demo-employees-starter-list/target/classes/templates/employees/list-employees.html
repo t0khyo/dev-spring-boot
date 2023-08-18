@@ -94,7 +94,8 @@
 
     <h2>Employee Directory</h2>
 
-    <hr><br>
+    <hr>
+    <br>
 
     <a th:href="@{/employees/showFormForAdd}"
        class="custom-btn mb-3">
@@ -109,7 +110,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
-            <th>Action</th>
+            <th colspan="2">Action</th>
         </tr>
         </thead>
 
@@ -121,9 +122,18 @@
             <!-- Add update button -->
             <td>
                 <a th:href="@{/employees/showFormForUpdate(employeeId=${tempEmployee.id})}"
-                class="custom-btn"
-                style="background-color: #318baf">
-                   Update
+                   class="custom-btn"
+                   style="background-color: #318baf">
+                    Update
+                </a>
+            </td>
+            <!-- Add delete button -->
+            <td>
+                <a th:href="@{/employees/delete(employeeId=${tempEmployee.id})}"
+                   class="custom-btn"
+                   style="background-color: #d54440"
+                   onclick="if (!(confirm('Are you sure you want to delete this employee?'))) return false">
+                    Delete
                 </a>
             </td>
         </tr>

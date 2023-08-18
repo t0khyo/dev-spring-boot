@@ -2,18 +2,16 @@ package com.t0khyo.springboot.thymeleafdemo.controller;
 
 import com.t0khyo.springboot.thymeleafdemo.entity.Employee;
 import com.t0khyo.springboot.thymeleafdemo.service.EmployeeService;
-import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 @RequestMapping("/employees")
 public class EmployeeController {
-    private EmployeeService employeeService;
+    private final EmployeeService employeeService;
 
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
@@ -59,6 +57,15 @@ public class EmployeeController {
         employeeService.save(theEmployee);
 
         // use redirect to prevent duplicate submission
+        return "redirect:/employees/list";
+    }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam("employeeId") int theId) {
+        // delete the employee
+        employeeService.deleteById(theId);
+
+        // redirect to /employees/list
         return "redirect:/employees/list";
     }
 }
