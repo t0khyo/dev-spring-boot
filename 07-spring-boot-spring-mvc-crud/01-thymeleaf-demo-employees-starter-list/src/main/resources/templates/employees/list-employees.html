@@ -109,6 +109,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Action</th>
         </tr>
         </thead>
 
@@ -117,6 +118,14 @@
             <td th:text="${tempEmployee.firstName}"/>
             <td th:text="${tempEmployee.lastName}"/>
             <td th:text="${tempEmployee.email}"/>
+            <!-- Add update button -->
+            <td>
+                <a th:href="@{/employees/showFormForUpdate(employeeId=${tempEmployee.id})}"
+                class="custom-btn"
+                style="background-color: #318baf">
+                   Update
+                </a>
+            </td>
         </tr>
         </tbody>
     </table>
