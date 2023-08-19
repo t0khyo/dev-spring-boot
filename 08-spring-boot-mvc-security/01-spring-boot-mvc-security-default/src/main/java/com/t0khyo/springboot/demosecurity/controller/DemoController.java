@@ -9,4 +9,11 @@ public class DemoController {
     public String showHome() {
         return "home";
     }
+
+    @GetMapping("/leaders")
+    public String showLeaders() {
+        return "leaders";
+    }
+
+
 }
