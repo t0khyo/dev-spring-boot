@@ -27,7 +27,7 @@ public class DemoSecurityConfig {
         UserDetails ahmed = User.builder()
                 .username("ahmed")
                 .password("{noop}test123")
-                .roles("EMPLOYEE", "MANAGER")
+                .roles("EMPLOYEE")
                 .build();
 
         return new InMemoryUserDetailsManager(abdelrahman, mohamed, ahmed);
@@ -35,17 +35,17 @@ public class DemoSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(
-                        configurer ->
-                                configurer
-                                        .anyRequest()
-                                        .authenticated()
+        http.authorizeHttpRequests(configurer ->
+                        configurer.anyRequest().authenticated()
                 )
                 .formLogin(formLoginConfigurer ->
                         formLoginConfigurer
                                 .loginPage("/showMyLoginPage")
                                 .loginProcessingUrl("/authenticateTheUser")
                                 .permitAll()
+                )
+                .logout(logoutConfigurer ->
+                        logoutConfigurer.permitAll()
                 );
 
         return http.build();
