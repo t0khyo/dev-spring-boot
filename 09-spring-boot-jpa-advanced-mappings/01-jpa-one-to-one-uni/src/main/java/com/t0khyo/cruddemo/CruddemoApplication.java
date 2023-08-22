@@ -3,6 +3,7 @@ package com.t0khyo.cruddemo;
 import com.t0khyo.cruddemo.dao.AppDAO;
 import com.t0khyo.cruddemo.entity.Instructor;
 import com.t0khyo.cruddemo.entity.InstructorDetail;
+import org.hibernate.event.spi.SaveOrUpdateEvent;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,10 +19,22 @@ public class CruddemoApplication {
     @Bean
     public CommandLineRunner commandLineRunner(AppDAO appDAO) {
         return runner -> {
-            //createInstructor(appDAO);
+            // createInstructor(appDAO);
 
-            findInstructor(appDAO);
+            // findInstructor(appDAO);
+            
+            deleteInstructor(appDAO);
         };
+    }
+
+    private void deleteInstructor(AppDAO appDAO) {
+
+        int theId = 2;
+        System.out.println("Finding instructor id: " + theId);
+
+        appDAO.deleteInstructorById(theId);
+
+        System.out.println("Done!");
     }
 
     private void findInstructor(AppDAO appDAO) {
