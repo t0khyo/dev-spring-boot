@@ -2,6 +2,7 @@ package com.t0khyo.cruddemo.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // ToDo: set up mapping to InstructorDetail entity
@@ -96,7 +97,16 @@ public class Instructor {
         this.courses = courses;
     }
 
-    // Modifying
+    // ToDo: add convenience method for bi-directional relationship
+    public void add(Course tempCourse) {
+        if(courses == null) {
+            courses = new ArrayList<>();
+        }
+
+        courses.add(tempCourse);
+
+        tempCourse.setInstructor(this);
+    }
 
     // toString()
     @Override
