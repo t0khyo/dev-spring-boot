@@ -2,6 +2,8 @@ package com.t0khyo.cruddemo.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 // ToDo: set up mapping to InstructorDetail entity
 
 @Entity
@@ -24,6 +26,14 @@ public class Instructor {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "instructor_detail_id")
     private InstructorDetail instructorDetail;
+
+
+    // NOTE: mappedBy Refers to "instructor" property in "Course" class
+    @OneToMany(mappedBy = "instructor",
+            cascade = {
+                    CascadeType.DETACH, CascadeType.PERSIST,
+                    CascadeType.REFRESH, CascadeType.MERGE})
+    private List<Course> courses;
 
     // constructors
     public Instructor() {
@@ -77,6 +87,16 @@ public class Instructor {
     public void setInstructorDetail(InstructorDetail instructorDetail) {
         this.instructorDetail = instructorDetail;
     }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
+    // Modifying
 
     // toString()
     @Override
