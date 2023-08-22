@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public class AppDAOImpl implements AppDAO {
 
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     public AppDAOImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -47,5 +47,15 @@ public class AppDAOImpl implements AppDAO {
     @Override
     public InstructorDetail findInstructorDetailById(int theId) {
         return entityManager.find(InstructorDetail.class, theId);
+    }
+
+    @Override
+    @Transactional
+    public void deleteConstructorDetailById(int theId) {
+        // retrieve the constructor detail
+        InstructorDetail tempInstructorDetail = entityManager.find(InstructorDetail.class, theId);
+
+        // delete the instructor detail
+        entityManager.remove(tempInstructorDetail);
     }
 }
