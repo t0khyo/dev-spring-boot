@@ -31,7 +31,7 @@ public class Instructor {
 
     // NOTE: mappedBy Refers to "instructor" property in "Course" class
     @OneToMany(mappedBy = "instructor",
-            fetch = FetchType.EAGER,
+            fetch = FetchType.LAZY,
             cascade = {
                     CascadeType.DETACH, CascadeType.PERSIST,
                     CascadeType.REFRESH, CascadeType.MERGE})

@@ -4,6 +4,7 @@ import com.t0khyo.cruddemo.entity.Course;
 import com.t0khyo.cruddemo.entity.Instructor;
 import com.t0khyo.cruddemo.entity.InstructorDetail;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -68,6 +69,13 @@ public class AppDAOImpl implements AppDAO {
 
     @Override
     public List<Course> findCoursesByInstructorId(int theId) {
-        return null;
+        // create the query
+        TypedQuery<Course> query = entityManager.createQuery(
+                "FROM Course WHERE instructor.id = :data" , Course.class);
+        query.setParameter("data", theId);
+
+        // execute the query
+        List<Course> theCourses = query.getResultList();
+        return theCourses;
     }
 }
