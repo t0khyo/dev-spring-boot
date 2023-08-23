@@ -9,22 +9,20 @@ import java.util.List;
 @Table(name = "course")
 public class Course {
 
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.DETACH, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE})
+    @JoinTable(name = "course_student",
+            joinColumns = @JoinColumn(name = "course_id"),
+            inverseJoinColumns = @JoinColumn(name = "student_id"))
+    List<Student> students;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-
     @Column(name = "title")
     private String title;
-
-    @ManyToOne(cascade = {
-            CascadeType.DETACH,
-            CascadeType.PERSIST,
-            CascadeType.REFRESH,
-            CascadeType.MERGE})
+    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE})
     @JoinColumn(name = "instructor_id")
     private Instructor instructor;
-
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "course_id")
     private List<Review> reviews;
@@ -70,6 +68,14 @@ public class Course {
         this.reviews = reviews;
     }
 
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
     // add convince method
     public void addReview(Review theReview) {
         if (reviews == null) {
@@ -78,12 +84,17 @@ public class Course {
         reviews.add(theReview);
     }
 
+    public void addStudent(Student theStudent) {
+        if (students == null) {
+            students = new ArrayList<>();
+        }
+        students.add(theStudent);
+    }
+
+
     // toString()
     @Override
     public String toString() {
-        return "Course{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                '}';
+        return "Course{" + "id=" + id + ", title='" + title + '\'' + '}';
     }
 }
