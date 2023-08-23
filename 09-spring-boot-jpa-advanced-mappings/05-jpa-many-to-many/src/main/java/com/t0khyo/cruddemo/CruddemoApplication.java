@@ -1,10 +1,7 @@
 package com.t0khyo.cruddemo;
 
 import com.t0khyo.cruddemo.dao.AppDAO;
-import com.t0khyo.cruddemo.entity.Course;
-import com.t0khyo.cruddemo.entity.Instructor;
-import com.t0khyo.cruddemo.entity.InstructorDetail;
-import com.t0khyo.cruddemo.entity.Review;
+import com.t0khyo.cruddemo.entity.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,8 +19,31 @@ public class CruddemoApplication {
     @Bean
     public CommandLineRunner commandLineRunner(AppDAO appDAO) {
         return runner -> {
-
+            createCourseAndStudents(appDAO);
         };
+    }
+
+    private void createCourseAndStudents(AppDAO appDAO) {
+        // create course and students
+        Course tempCourse = new Course("Pacman - How to Score One Million points");
+
+        // create the students
+        Student tempStudent1 = new Student("Ahmed", "Rashed", "Ahmed@t0khyo.dev");
+        Student tempStudent2= new Student("Mohamed", "Alaam", "Alaam@t0khyo.ops");
+        Student tempStudent3 = new Student("Ziad", "Amer", "Ziad@t0khyo.dev");
+
+        // add student to the course
+        tempCourse.addStudent(tempStudent1);
+        tempCourse.addStudent(tempStudent2);
+        tempCourse.addStudent(tempStudent3);
+
+        // save the course and associated students
+        System.out.println("Saving course: " + tempCourse);
+        System.out.println("associated student: " + tempCourse.getStudents());
+
+        appDAO.save(tempCourse);
+
+        System.out.println("Done!");
     }
 
     private void deleteCourseAndReviews(AppDAO appDAO) {
