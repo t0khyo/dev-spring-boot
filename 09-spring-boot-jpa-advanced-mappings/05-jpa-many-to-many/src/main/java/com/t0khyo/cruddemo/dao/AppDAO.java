@@ -3,6 +3,7 @@ package com.t0khyo.cruddemo.dao;
 import com.t0khyo.cruddemo.entity.Course;
 import com.t0khyo.cruddemo.entity.Instructor;
 import com.t0khyo.cruddemo.entity.InstructorDetail;
+import com.t0khyo.cruddemo.entity.Student;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -36,4 +37,6 @@ public interface AppDAO {
     Course findCourseAndReviewsByCourseId(int theId);
 
     Course findCourseAndStudentByCourseId(int theId);
+
+    Student findStudentAndCoursesByStudentId(int theId);
 }
