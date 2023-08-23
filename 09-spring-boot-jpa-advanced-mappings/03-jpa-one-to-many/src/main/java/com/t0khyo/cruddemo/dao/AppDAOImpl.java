@@ -1,10 +1,13 @@
 package com.t0khyo.cruddemo.dao;
 
+import com.t0khyo.cruddemo.entity.Course;
 import com.t0khyo.cruddemo.entity.Instructor;
 import com.t0khyo.cruddemo.entity.InstructorDetail;
 import jakarta.persistence.EntityManager;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /*
     ToDo:
@@ -61,5 +64,10 @@ public class AppDAOImpl implements AppDAO {
 
         // delete the instructor detail
         entityManager.remove(tempInstructorDetail);
+    }
+
+    @Override
+    public List<Course> findCoursesByInstructorId(int theId) {
+        return null;
     }
 }
