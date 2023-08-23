@@ -48,7 +48,7 @@ public class AppDAOImpl implements AppDAO {
         List<Course> courses = tempInstructor.getCourses();
 
         // break association of all courses for the instructor
-        for(Course tempCourse :courses) {
+        for (Course tempCourse : courses) {
             tempCourse.setInstructor(null);
         }
 
@@ -133,5 +133,20 @@ public class AppDAOImpl implements AppDAO {
     @Transactional
     public void save(Course theCourse) {
         entityManager.persist(theCourse);
+    }
+
+    @Override
+    public Course findCourseAndReviewsByCourseId(int theId) {
+        // create query
+        TypedQuery<Course> query = entityManager.createQuery(
+                "SELECT c from Course c "
+                        + "JOIN FETCH c.reviews "
+                        + "WHERE c.id = :data", Course.class);
+        query.setParameter("data", theId);
+
+        // execute the query
+        Course theCourse = query.getSingleResult();
+
+        return theCourse;
     }
 }
