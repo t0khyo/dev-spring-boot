@@ -2,6 +2,7 @@ package com.t0khyo.demo.rest;
 
 import com.t0khyo.demo.entity.Student;
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,12 @@ public class StudentRestController {
         theStudents.add(new Student("Mohamed", "Abdeljalil"));
         theStudents.add(new Student("Abdelrahman", "Eltokhy"));
         theStudents.add(new Student("Mazen", "Sedik"));
+    }
+
+    @PreDestroy
+    public void destructor() {
+        theStudents = null;
+        System.out.println("Application stopped, Bye");
     }
 
     // define endpoint for "/students" - return a list of students
