@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05293a26-409b-4db4-ac5b-ad1aecddc8f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/02-validation-demo/src/main/java/com/t0khyo/springboot/mvc/validationdemo/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/02-validation-demo/src/main/java/com/t0khyo/springboot/mvc/validationdemo/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/02-validation-demo/src/main/java/com/t0khyo/springboot/mvc/validationdemo/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/02-validation-demo/src/main/java/com/t0khyo/springboot/mvc/validationdemo/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/02-validation-demo/src/main/resources/templates/customer-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/02-validation-demo/src/main/resources/templates/customer-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +40,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;B:/dev-spring-boot/04-spring-boot-rest-crud/04-spring-boot-rest-crud-employee-with-spring-rest&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Master",
+    "last_opened_file_path": "B:/dev-spring-boot/05-spring-boot-rest-security/00-spring-boot-rest-security-employee-starter-code",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="B:\dev-spring-boot\05-spring-boot-rest-security\00-spring-boot-rest-security-employee-starter-code\src\main\resources" />
