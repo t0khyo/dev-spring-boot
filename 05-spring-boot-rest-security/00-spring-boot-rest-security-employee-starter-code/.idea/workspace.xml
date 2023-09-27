@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05293a26-409b-4db4-ac5b-ad1aecddc8f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../10-spring-boot-aop/01-spring-boot-aop/src/main/java/com/t0khyo/aop/aspect/MyDemoLoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../10-spring-boot-aop/01-spring-boot-aop/src/main/java/com/t0khyo/aop/dao/AccountDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../10-spring-boot-aop/01-spring-boot-aop/src/main/java/com/t0khyo/aop/AopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../10-spring-boot-aop/01-spring-boot-aop/src/main/java/com/t0khyo/aop/AopApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
